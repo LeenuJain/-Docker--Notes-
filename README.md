@@ -28,9 +28,9 @@ Imagine you built a website using Python:
 
 It's like putting all ingredients for a recipe into one box, so anyone can easily cook the same dish without hunting for each ingredient separately.
 
-# Docker vs Virtual Machines
+## Docker vs Virtual Machines
 
-## Virtual Machines
+### Virtual Machines
 Virtual machines (VMs) enable running multiple operating systems simultaneously on a single physical machine without affecting the host operating system.
 
 **Memory allocation in VMs:** For each VM specific amount of memeory is allocated from the host memory based on the OS type and software and which cannot be changed even if it is not utilized fully.
@@ -40,13 +40,13 @@ Virtual machines (VMs) enable running multiple operating systems simultaneously 
   - Creating two 4GB VMs is possible
   - Creating one 4GB VM and one 6GB VM is impossible due to fixed allocation constraints
 
-## Cloud Computing
+### Cloud Computing
 When using AWS EC2 instances:
   - Each instance occupies a standard amount of memory
   - Higher memory usage directly increases costs
   - Resources remain allocated even when underutilized
 
-## Docker
+### Docker
 In Docker we create containers which are just like VMs  but they are not VMs. This allocates memory for each container once it is activated and returns back the memory to host memory post deactivation, so that other containers can utilize this memory.  
 One more advantage is it does not require to install os in the container it just takes it form the docker hub when activated making it light weight.  
   - **Dynamic Memory Management:** Containers only use memory when active and release it when inactive
