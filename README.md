@@ -27,3 +27,33 @@ Imagine you built a website using Python:
 - **With Docker packaging**: You create one container image with everything included, and simply say "Run this Docker container"
 
 It's like putting all ingredients for a recipe into one box, so anyone can easily cook the same dish without hunting for each ingredient separately.
+
+# Docker vs Virtual Machines
+
+## Virtual Machines
+Virtual machines (VMs) enable running multiple operating systems simultaneously on a single physical machine without affecting the host operating system.
+
+**VMware Workstation Example:** This platform allows users to create and run multiple VMs on one physical machine alongside the host system.
+
+### Memory Allocation in VMs
+- VMs require fixed memory allocation from the host system
+- Memory is reserved regardless of actual utilization
+- **Example:** With an 8GB host machine:
+  - Creating two 4GB VMs is possible
+  - Creating one 4GB VM and one 6GB VM is impossible due to fixed allocation constraints
+
+### Cloud Computing Challenges
+When using AWS EC2 instances:
+- Each instance occupies a standard amount of memory
+- Higher memory usage directly increases costs
+- Resources remain allocated even when underutilized
+
+## Docker Advantage
+Docker uses containers which differ from VMs in critical ways:
+
+- **Dynamic Memory Management:** Containers only use memory when active and release it when inactive
+- **Resource Efficiency:** Other containers can utilize freed memory
+- **Lightweight Design:** No need to install separate operating systems for each container
+- **On-Demand Resources:** Container images are pulled from Docker Hub when needed
+
+This approach makes Docker more efficient, cost-effective, and flexible compared to traditional virtual machines.
