@@ -63,3 +63,21 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - Docker is written in 'go' language.
 - Docker was first released in March 2013 and it is developed by Solomon Hykes and Sebastian Pahl.
 - Docker is a set of Paltofrm as a Service that uses **Os level virtualisation** whereas VMware uses **Hardware level Virtualisation**.
+
+# Advantages
+- No preallocation of RAM
+- CI Efficiency : Docker enables you to build a container image and use that  same image accross every step  of the deployment process (can reuse the image)
+- Less cost
+- light in weight
+- It can run on physical hardware/ Virtual hardware or on cloud
+- it takes very less time to create a container
+
+# Disadvantages
+- Docker is not a good solution for application that requires rich GUI
+- Difficult to manage large amount of containers
+- Docker does not provide cross-platform compatability means if an application is designed to run in a docker container on windows, then it can't run on linux or vice versa
+- Docker is suitable when the deployement os and testing os are same. if the os is different we should use VMs.
+- No soultion for data recovery and backup
+
+# Docker Architecture
+  
