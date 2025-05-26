@@ -49,7 +49,8 @@ When using AWS EC2 instances:
 ## Docker
 - In Docker we create containers which are just like VMs  but they are not VMs.  
 - This allocates memory for each container once it is activated and returns back the memory to host memory post deactivation, so that other containers can utilize this memory.  
-- Also one more advantage is it does not require to install os in the container it just takes it form the docker hub when activated making it light weight.  
+- Also one more advantage is it does not require to install os in the container it just takes it form the docker hub when activated making it light weight.
+  
   - **Dynamic Memory Management:** Containers only use memory when active and release it when inactive
   - **Resource Efficiency:** Other containers can utilize freed memory
   - **Lightweight Design:** No need to install separate operating systems for each container
