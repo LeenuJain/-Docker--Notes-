@@ -56,7 +56,7 @@ One more advantage is it does not require to install os in the container it just
 
 This approach makes Docker more efficient, cost-effective, and flexible compared to traditional virtual machines.
 
-# Docker points
+## Docker points
 - Docker is a open source centralised platform designed to create, deploy and run applications.
 - Docker uses containers on the host OS to run applications. It allows applications to use the same linux kernal as a system on the host computer rather than creating a whole virtual os.
 - We can install docke on any Os but docker wgine runs natively on Liux distribution.
@@ -64,7 +64,7 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - Docker was first released in March 2013 and it is developed by Solomon Hykes and Sebastian Pahl.
 - Docker is a set of Paltofrm as a Service that uses **Os level virtualisation** whereas VMware uses **Hardware level Virtualisation**.
 
-# Advantages
+## Advantages
 - No preallocation of RAM
 - CI Efficiency : Docker enables you to build a container image and use that  same image accross every step  of the deployment process (can reuse the image)
 - Less cost
@@ -72,12 +72,12 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - It can run on physical hardware/ Virtual hardware or on cloud
 - it takes very less time to create a container
 
-# Disadvantages
+## Disadvantages
 - Docker is not a good solution for application that requires rich GUI
 - Difficult to manage large amount of containers
 - Docker does not provide cross-platform compatability means if an application is designed to run in a docker container on windows, then it can't run on linux or vice versa
 - Docker is suitable when the deployement os and testing os are same. if the os is different we should use VMs.
 - No soultion for data recovery and backup
 
-# Docker Architecture
+## Docker Architecture
   
