@@ -46,8 +46,11 @@ When using AWS EC2 instances:
   - Higher memory usage directly increases costs
   - Resources remain allocated even when underutilized
 
-## Docker Advantage
-Docker uses containers which differ from VMs in critical ways:
+## Docker
+In Docker we create containers which are just like VM's VMs but they are not like VMs.
+This allocates memory for each container once it is activated and returns back the memory to host memory post deactivation, so that other containers can utilize this memory.
+Also one more advantage is it does not require to install os in the container it just takes it form the docker hub when activated making it light weight.
+
 
 - **Dynamic Memory Management:** Containers only use memory when active and release it when inactive
 - **Resource Efficiency:** Other containers can utilize freed memory
