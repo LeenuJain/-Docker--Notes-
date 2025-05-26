@@ -32,10 +32,8 @@ It's like putting all ingredients for a recipe into one box, so anyone can easil
 
 ## Virtual Machines
 Virtual machines (VMs) enable running multiple operating systems simultaneously on a single physical machine without affecting the host operating system.
-
-**VMware Workstation Example:** This platform allows users to create and run multiple VMs on one physical machine alongside the host system.
-
-### Memory Allocation in VMs
+**Memory allocation in VMs:**
+For each VM specific amount of memeory is allocated from the host memory based on the OS type and software and which cannot be changed even if it is not utilized fully.  Let's consider host Machine has 8 GB and Now I have created two VM's and each require 4GB. This is possible. Now if one VM required 4GB and other 6GB then it is not possible. This is the limitation we have when we use VM's
 - VMs require fixed memory allocation from the host system
 - Memory is reserved regardless of actual utilization
 - **Example:** With an 8GB host machine:
