@@ -40,11 +40,11 @@ Virtual machines (VMs) enable running multiple operating systems simultaneously 
   - Creating two 4GB VMs is possible
   - Creating one 4GB VM and one 6GB VM is impossible due to fixed allocation constraints
 
-### Cloud Computing Challenges
-When using AWS EC2 instances:
-- Each instance occupies a standard amount of memory
-- Higher memory usage directly increases costs
-- Resources remain allocated even when underutilized
+## Cloud Computing Challenges
+-When using AWS EC2 instances:
+  - Each instance occupies a standard amount of memory
+  - Higher memory usage directly increases costs
+  - Resources remain allocated even when underutilized
 
 ## Docker Advantage
 Docker uses containers which differ from VMs in critical ways:
