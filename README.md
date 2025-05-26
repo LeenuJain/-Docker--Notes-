@@ -56,7 +56,7 @@ One more advantage is it does not require to install os in the container it just
 
 This approach makes Docker more efficient, cost-effective, and flexible compared to traditional virtual machines.
 
-# Docker pointS
+# Docker points
 - Docker is a open source centralised platform designed to create, deploy and run applications.
 - Docker uses containers on the host OS to run applications. It allows applications to use the same linux kernal as a system on the host computer rather than creating a whole virtual os.
 - We can install docke on any Os but docker wgine runs natively on Liux distribution.
