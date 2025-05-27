@@ -100,3 +100,5 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 ### Docker Networking:
 - Docker provides networking capabilities for containers to communicate with each other and with external networks. It uses software-defined networks (SDN) to create virtual networks, enabling connectivity and isolation. Users can create custom networks, connect containers to networks, and define network policies using Docker commands or Docker Compose.
 
+![image](https://github.com/user-attachments/assets/8e013942-1ebf-40f7-bdb2-437c64b974b0)
+
