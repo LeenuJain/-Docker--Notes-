@@ -81,7 +81,6 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 
 ## Docker Architecture
 ![image](https://github.com/user-attachments/assets/8aa1df16-8792-4566-9a56-f0e78fe4a8df)  
-
 ### Docker Engine:
 - The Docker Engine is the heart of the Docker platform. It comprises two main components:
 - **Docker Daemon (dockerd)** : The Docker daemon runs on the host machine and is responsible for managing Docker objects, such as images, containers, networks, and volumes.
