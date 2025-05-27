@@ -108,6 +108,7 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 ## Commands in Docker
 | Docker Command | Description |
 | -------------- | ----------- |
+| `service docker status` | checks service is started or not |
 | `docker images` | Lists all images present in your machine |
 | `docker search jenkins` | To search for jenkins images in docker |
 | `docker ps` | Shows running containers |
@@ -116,8 +117,9 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 | `docker run <image>` | Creates and starts a container from an image. ex: docker run jenkins |
 | `docker stop <container>` | Stops a running container. ex: docker stop jenkinscontainer |
 | `docker start <container>`` | starts a containers. ex: docker start jenkinscontainer |
-| `docker rm <container>` | Removes a stopped container |
-| `docker rmi <image>` | Removes an image |
+| `docker attach <container>`` | goes inside a containers. ex: docker attach jenkinscontainer |
+| `docker rm <container>` | Removes a stopped container ex: docker rm jenkinscontainer  |
+| `docker rmi <image>` | Removes an image ex: docker rmi jenkins |
 | `docker exec -it <container> <command>` | Executes a command in a running container |
 | `docker build -t <name> .` | Builds an image from a Dockerfile in current directory |
 
