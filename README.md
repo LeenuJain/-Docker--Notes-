@@ -106,23 +106,21 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 ![image](https://github.com/user-attachments/assets/8e013942-1ebf-40f7-bdb2-437c64b974b0)
 
 ## Commands in Docker
-| Docker Command | Description |
-| -------------- | ----------- |
-| `service docker status` | checks service is started or not |
-| `docker images` | Lists all images present in your machine |
-| `docker search jenkins` | To search for jenkins images in docker |
-| `docker ps` | Shows running containers |
-| `docker ps -a` | Shows all containers (running and stopped) |
-| `docker pull <image>` | Downloads an image from Docker Hub. example: docker pull jenkins. This will download jenkins image |
-| `docker run <image>` | Creates and starts a container from an image. ex: docker run jenkins |
-| `docker stop <container>` | Stops a running container. ex: docker stop jenkinscontainer |
-| `docker start <container>` | starts a containers. ex: docker start jenkinscontainer |
-| `docker attach <container>` | goes inside a containers. ex: docker attach jenkinscontainer |
-| `docker rm <container>` | Removes a stopped container ex: docker rm jenkinscontainer  |
-| `docker rmi <image>` | Removes an image ex: docker rmi jenkins |
-| `docker exec -it <container> <command>` | Executes a command in a running container |
-| `docker build -t <name>` | Builds an image from a Dockerfile in current directory |
-| `docker commit <container_id/name> <new_image_name>` | Creates a new image from an existing container with its changes. This command is useful when you've made changes to a container (installed software, modified files, etc.) and want to save those changes as a new image. |
-| `docker diff <container_id/name>` | Shows changes to files and directories in a container's filesystem compared to its base image. This displays the files that were added (A), deleted (D), or modified (C) in the container compared to its original image. |
-
-
+| **Docker Command** | Description |
+| ------------------ | ----------- |
+| **`service docker status`** | checks service is started or not |
+| **`docker images`** | Lists all images present in your machine |
+| **`docker search jenkins`** | To search for jenkins images in docker |
+| **`docker ps`** | Shows running containers |
+| **`docker ps -a`** | Shows all containers (running and stopped) |
+| **`docker pull <image>`** | Downloads an image from Docker Hub. example: docker pull jenkins. This will download jenkins image |
+| **`docker run <image>`** | Creates and starts a container from an image. ex: docker run jenkins |
+| **`docker stop <container>`** | Stops a running container. ex: docker stop jenkinscontainer |
+| **`docker start <container>`** | starts a containers. ex: docker start <LOCATION> |
+| **`docker attach <container>`** | goes inside a containers. ex: docker attach jenkinscontainer |
+| **`docker rm <container>`** | Removes a stopped container ex: docker rm jenkinscontainer  |
+| **`docker rmi <image>`** | Removes an image ex: docker rmi jenkins |
+| **`docker exec -it <container> <command>`** | Executes a command in a running container |
+| **`docker build -t <name>`** | Builds an image from a <LOCATION> in current directory |
+| **`docker commit <container_id/name> <new_image_name>`** | Creates a new image from an existing container with its changes. This command is useful when you've made changes to a container (installed software, modified files, etc.) and want to save those changes as a new image. |
+| **`docker diff <container_id/name>`** | Shows changes to files and directories in a container's filesystem compared to its base image. This displays the files that were added (A), deleted (D), or modified (C) in the container compared to its original image. |
