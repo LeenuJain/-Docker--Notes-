@@ -130,9 +130,6 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - Automation of docker image creation.
 
 ### Dockerfile Instructions
-
-## Dockerfile Instructions
-
 | **Instruction** | **Description** |
 | --------------- | --------------- |
 | **`FROM <image>`** | Defines a base for your image. |
