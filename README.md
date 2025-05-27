@@ -1,9 +1,9 @@
 # Docker
+- Docker is an open-source platform that enables developers to package their applications and dependencies into lightweight containers.  
+- These containers encapsulate everything an application needs to run, including code, runtime, system tools, and libraries.  
+- Docker containers are portable, scalable, and consistent across different environments, making it easier to develop, deploy, and manage applications.
 
-Docker is a tool that helps package software into containers. Package software means it bundles everything your application needs into one neat unit.
-
-Think of containers as lightweight, portable boxes that include everything needed to run a piece of software:
-
+Think of containers as lightweight, portable boxes that include everything needed to run a piece of software:  
 - The code
 - Runtime environment
 - System tools
