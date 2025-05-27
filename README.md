@@ -80,4 +80,5 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - No soultion for data recovery and backup
 
 ## Docker Architecture
-![image](https://github.com/user-attachments/assets/85cefc98-548c-4c02-89fb-822a1f755d82)
+![image](https://github.com/user-attachments/assets/8aa1df16-8792-4566-9a56-f0e78fe4a8df)
+
