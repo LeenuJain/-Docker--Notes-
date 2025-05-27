@@ -124,3 +124,8 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 | **`docker build -t <name>`** | Builds an image from a <LOCATION> in current directory |
 | **`docker commit <container_id/name> <new_image_name>`** | Creates a new image from an existing container with its changes. This command is useful when you've made changes to a container (installed software, modified files, etc.) and want to save those changes as a new image. |
 | **`docker diff <container_id/name>`** | Shows changes to files and directories in a container's filesystem compared to its base image. This displays the files that were added (A), deleted (D), or modified (C) in the container compared to its original image. |
+
+## Docker file
+- Docker is basically a test file. It contains some set of instructions.
+- Automation of docker image creation.
+  
