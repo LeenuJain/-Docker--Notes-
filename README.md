@@ -85,7 +85,8 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 ## Docker Engine:
 - The Docker Engine is the heart of the Docker platform. It comprises two main components:
 - **Docker Daemon (dockerd)** : The Docker daemon runs on the host machine and is responsible for managing Docker objects, such as images, containers, networks, and volumes.
-- **Docker Client** : The Docker client is a command-line interface (CLI) tool that allows users to interact with the Docker daemon through commands. Users can build, run, stop, and manage Docker containers using the Docker CLI.  
+- **Docker Client** : The Docker client is a command-line interface (CLI) tool that allows users to interact with the Docker daemon through commands. Users can build, run, stop, and manage Docker containers using the Docker CLI.
+- The CLI processes your commands, converts them to API requests, and waits for the response from the Docker daemon. It’s the daemon that’s responsible for actually starting containers, building images, and handling the other Docker operations you invoke with the CLI.  
 ## Docker Images:
 - Docker images are the building blocks of containers. They are read-only templates that contain the application code, runtime, system tools, libraries, and other dependencies. Docker images are created from Dockerfiles, which are text files containing instructions for building the image layer by layer.  
 ## Docker Containers:
