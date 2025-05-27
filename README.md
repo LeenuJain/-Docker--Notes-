@@ -121,5 +121,6 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 | `docker rm <container>` | Removes a stopped container ex: docker rm jenkinscontainer  |
 | `docker rmi <image>` | Removes an image ex: docker rmi jenkins |
 | `docker exec -it <container> <command>` | Executes a command in a running container |
-| `docker build -t <name> .` | Builds an image from a Dockerfile in current directory |
+| `docker build -t <name>` | Builds an image from a Dockerfile in current directory |
+| `docker commit <container_id/name> <new_image_name>` | Creates a new image from an existing container with its changes. This command is useful when you've made changes to a container (installed software, modified files, etc.) and want to save those changes as a new image. |
 
