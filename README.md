@@ -87,7 +87,11 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - **Docker Client** : The Docker client is a command-line interface (CLI) tool that allows users to interact with the Docker daemon through commands. Users can build, run, stop, and manage Docker containers using the Docker CLI.Docker client uses commands and REST API to communicate with the docker daemon.
 - The CLI processes your commands, converts them to API requests, and waits for the response from the Docker daemon. It’s the daemon that’s responsible for actually starting containers, building images, and handling the other Docker operations you invoke with the CLI.  
 ### Docker Images:
-- Docker images are the building blocks of containers. They are read-only templates that contain the application code, runtime, system tools, libraries, and other dependencies. Docker images are created from Dockerfiles, which are text files containing instructions for building the image layer by layer.  
+- Docker images are the building blocks of containers. They are read-only templates that contain the application code, runtime, system tools, libraries, and other dependencies. Docker images are created from Dockerfiles, which are text files containing instructions for building the image layer by layer.
+- ways to create a docker file
+    - take image from docker hub
+    - create image from docker file
+    - create image from existing docker containers  
 ### Docker Containers:
 - Docker containers are runnable instances of Docker images. They encapsulate the application and its dependencies, providing an isolated environment for execution. Containers can be created, started, stopped, moved, and deleted using Docker commands.  
 ### Docker Registry:
