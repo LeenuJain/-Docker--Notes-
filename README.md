@@ -88,7 +88,7 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - The CLI processes your commands, converts them to API requests, and waits for the response from the Docker daemon. It’s the daemon that’s responsible for actually starting containers, building images, and handling the other Docker operations you invoke with the CLI.  
 ### Docker Images:
 - Docker images are the building blocks of containers. They are read-only templates that contain the application code, runtime, system tools, libraries, and other dependencies. Docker images are created from Dockerfiles, which are text files containing instructions for building the image layer by layer.
-- ways to create a docker file
+- ways to create a docker image:
     - take image from docker hub
     - create image from docker file
     - create image from existing docker containers  
