@@ -47,7 +47,7 @@ When using AWS EC2 instances:
   - Resources remain allocated even when underutilized
 
 ### Docker
-In Docker we create containers which are just like VMs  but they are not VMs. This allocates memory for each container once it is activated and returns back the memory to host memory post deactivation, so that other containers can utilize this memory.  
+In Docker we create containers which are just like VMs but they are not VMs. This allocates memory for each container once it is activated and returns back the memory to host post deactivation, so that other containers can utilize this memory.  
 One more advantage is it does not require to install os in the container it just takes it form the docker hub when activated making it light weight.  
   - **Dynamic Memory Management:** Containers only use memory when active and release it when inactive
   - **Resource Efficiency:** Other containers can utilize freed memory
@@ -59,7 +59,7 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 ## Docker points
 - Docker is a open source centralised platform designed to create, deploy and run applications.
 - Docker uses containers on the host OS to run applications. It allows applications to use the same linux kernal as a system on the host computer rather than creating a whole virtual os.
-- We can install docke on any Os but docker wgine runs natively on Liux distribution.
+- We can install docker on any os but docker engine runs natively on Linux distribution.
 - Docker is written in 'go' language.
 - Docker was first released in March 2013 and it is developed by Solomon Hykes and Sebastian Pahl.
 - Docker is a set of Paltofrm as a Service that uses **Os level virtualisation** whereas VMware uses **Hardware level Virtualisation**.
