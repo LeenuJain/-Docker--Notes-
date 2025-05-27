@@ -129,7 +129,7 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - Docker is basically a test file. It contains some set of instructions.
 - Automation of docker image creation.
 
-## Dockerfile Instructions
+### Dockerfile Instructions
 
 | **Instruction** | **Description** |
 | --------------- | --------------- |
