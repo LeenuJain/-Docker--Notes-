@@ -138,7 +138,7 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 | **`WORKDIR <directory>`** | Sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD instructions that follow it in the Dockerfile. |
 | **`COPY <src> <dest>`** | Copies new files or directories from <src> and adds them to the filesystem of the container at the path <dest>. |
 | **`ADD <src> <dest>`** | Similar to COPY but with additional features - can handle remote URLs and automatically extract compressed files. |
-| **`EXPOSE <port>`** | Informs Docker that the container listens on the specified network port(s) at runtime. |
+| **`EXPOSE <port>`** | Informs Docker that the container listens on the specified network port(s) at runtime. for exmaple to expose ports such as 8080 port for tomcat. port 80 for nginx etc |
 | **`CMD <command>`** | Lets you define the default program that is run once you start the container based on this image. Each Dockerfile only has one CMD, and only the last CMD instance is respected when multiple exist. |
 | **`ENTRYPOINT <command>`** | Configures the container to run as an executable. Often used with CMD, where ENTRYPOINT specifies the executable and CMD specifies the parameters. |
 | **`ENV <key>=<value>`** | Sets environment variables in the container. These values will be available to processes running inside the container. |
