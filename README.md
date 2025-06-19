@@ -126,7 +126,7 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 | **`docker diff <container_id/name>`** | Shows changes to files and directories in a container's filesystem compared to its base image. This displays the files that were added (A), deleted (D), or modified (C) in the container compared to its original image. |
 
 ## Docker file
-- Docker is basically a test file. It contains some set of instructions.
+- Docker is basically a text file. It contains some set of instructions.
 - Automation of docker image creation.
 
 ### Dockerfile Instructions
