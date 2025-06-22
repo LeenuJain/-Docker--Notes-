@@ -71,11 +71,13 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
   
 **Docker Desktop**
 
-  ![img.png](img.png)
+![image](https://github.com/user-attachments/assets/1b4c3281-333f-48be-a068-32543c926c02)
+
 
 **Docker CLI**
 
-![img_2.png](img_2.png)
+<img src="https://github.com/user-attachments/assets/9470251f-a2a3-4acf-bdc0-897dd5381824" width="500" height="300"/>
+
 
 ## Advantages
 - No preallocation of RAM
