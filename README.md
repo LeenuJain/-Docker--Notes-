@@ -64,6 +64,19 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - Docker was first released in March 2013 and it is developed by Solomon Hykes and Sebastian Pahl.
 - Docker is a set of Paltofrm as a Service that uses **Os level virtualisation** whereas VMware uses **Hardware level Virtualisation**.
 
+## Installation
+- We can install docker using the below link, You do NOT need to install Docker CLI and GUI separately.
+- [Download Docker](https://www.docker.com/products/docker-desktop)
+- Just install Docker Desktop, and it includes: (Docker CLI, Docker Engine, Docker Compose & Docker Desktop) 
+  
+**Docker Desktop**
+
+  ![img.png](img.png)
+
+**Docker CLI**
+
+![img_2.png](img_2.png)
+
 ## Advantages
 - No preallocation of RAM
 - CI Efficiency : Docker enables you to build a container image and use that  same image accross every step  of the deployment process (can reuse the image)
