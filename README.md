@@ -158,5 +158,105 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 | **`ENTRYPOINT <command>`** | Configures the container to run as an executable. Often used with CMD, where ENTRYPOINT specifies the executable and CMD specifies the parameters. |
 | **`ENV <key>=<value>`** | Sets environment variables in the container. These values will be available to processes running inside the container. |
 
+### Docker Example
+lets create a flask aap, here is the simple flask code
+* **app.py**
+```python
+from flask import Flask
 
-  
+app = Flask(__name__)
+
+@app.route('/')
+def welcome():
+    return "Hello, Dockerized Flask!"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
+```
+* **requirements.txt**
+```bash
+flask
+```
+* **Dockerfile**
+```bash
+FROM python:3.10
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
+```
+Now Create Docker image
+```bash
+(venv) ###test#%  docker build -t flask-app .
+[+] Building 50.3s (11/11) FINISHED                                                                                                                   docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                                                  0.0s
+ => => transferring dockerfile: 180B                                                                                                                                  0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                                                                        5.3s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                                                                     0.0s
+ => => transferring context: 2B                                                                                                                                       0.0s
+ => [1/5] FROM docker.io/library/python:3.10@sha256:33f72df2ad8c9f777bf0adb35b9d89c5d62935cee2af1f9c3224fb6f7da1dc6b                                                 41.6s
+ => => resolve docker.io/library/python:3.10@sha256:33f72df2ad8c9f777bf0adb35b9d89c5d62935cee2af1f9c3224fb6f7da1dc6b                                                  0.0s
+ => => sha256:c783904c8850a065e62cff72dc201440e1368293de9c85fb717b7db3c88e2b71 250B / 250B                                                                            2.0s
+ => => sha256:56de190fdfe81b171f63e92c8d92a549bd437843d1a314d3f85c9f820f0cfaa5 20.84MB / 20.84MB                                                                     19.4s
+ => => sha256:7b9f5f869a6e52ee8694ac02a075037130f5808ba0413f26dbda8ff9aed694ef 6.24MB / 6.24MB                                                                        1.9s
+ => => sha256:14f5719d6358cc525f45e16c04ce36e5245978df9021dec8d0619729d9de8537 64.36MB / 64.36MB                                                                     17.6s
+ => => sha256:78f00d2fce1661cc6f10e2982ec23164c04e8216c9b6becd72c7dfa2c1500773 202.77MB / 202.77MB                                                                   42.9s
+ => => sha256:c5e137b9ec173f900a44376f31987bb15c0f5bb562aa6f8ad5db5a090ec88b2e 23.55MB / 23.55MB                                                                      4.0s
+ => => sha256:8fbf1dd6492cb885c9004e9e7ecb0880a823cd140e63f4b13dfc1bc4d0d3e37b 48.34MB / 48.34                                                                        0.0s
+ => [internal] load build context                                                                                                                                     0.0s
+ => => transferring context: 450B                                                                                                                                     0.0s
+ => [2/5] WORKDIR /app                                                                                                                                                0.3s
+ => [3/5] COPY requirements.txt .                                                                                                                                     0.0s
+ => [4/5] RUN pip install -r requirements.txt                                                                                                                         2.4s
+ => [5/5] COPY . .                                                                                                                                                    0.0s
+ => exporting to image                                                                                                                                                0.6s
+ => => exporting layers                                                                                                                                               0.5s
+ => => exporting manifest sha256:02ca2f769b728e0a98e6e5191384250364d64904b1211c64d563f74c209973a1                                                                     0.0s
+ => => exporting config sha256:56652c6344fcdb70725c5c4d762498a52e953155584bdf0608f03d06bb93b18f                                                                       0.0s
+ => => exporting attestation manifest sha256:7e3035eb20544cb79ef13358240bfef66a93e0f489016f1e48c1035d35e05558                                                         0.0s
+ => => exporting manifest list sha256:4666f71e577cec8f9ec4447576e06b33c307b71e3abecf1cf11b655306b1e06e                                                                0.0s
+ => => naming to docker.io/library/flask-app:latest                                                                                                                   0.0s
+ => => unpacking to docker.io/library/flask-app:latest                                                                                                                0.1s
+(venv) ###test#  % 
+
+```
+
+Now run the image with port mapping.
+```python
+(venv) ### test# % docker run -d -p 5000:5000 --name flask-container flask-app
+afa6430cf68eadd4603156cdff1fd352e29d528f39308a8d9c298f8e7602015d
+```
+lets break down above command:
+- docker run → Starts a new container from an image.
+- -d → Runs the container in detached mode (it runs in the background).
+- -p 5000:5000 → Port mapping
+  -  Left side: 5000 → Host machine port
+  - Right side: 5000 → Container port
+  - This maps your local machine’s port 5000 to the container’s port 5000.
+- --name flask-container → This assigns a custom name (flask-container) to the running container.
+
+Verify the running container
+  ```bash
+  (venv) ### test# %  docker ps -a 
+  CONTAINER ID   IMAGE       COMMAND           CREATED          STATUS          PORTS                                         NAMES
+  afa6430cf68e   flask-app   "python app.py"   23 seconds ago   Up 22 seconds   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   flask-container
+  (venv) ### test# %  
+  ```
+We can also verify from docker desktop:
+
+![image](https://github.com/user-attachments/assets/75efe5e3-e521-4cfe-adc6-d221d94f647a)
+
+We can check on chrome, using localhost:5000 port
+```bash
+Hello, Dockerized Flask!
+```
+
