@@ -90,9 +90,36 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 ## Disadvantages
 - Docker is not a good solution for application that requires rich GUI
 - Difficult to manage large amount of containers
-- Docker does not provide cross-platform compatability means if an application is designed to run in a docker container on windows, then it can't run on linux or vice versa
+- Docker does not provide cross-platform compatability completely.This point is explained in detailed below.
 - Docker is suitable when the deployement os and testing os are same. if the os is different we should use VMs.
 - No soultion for data recovery and backup
+
+## Understading Cross compatibility
+"Docker containers require kernel compatibility - Linux containers need a Linux kernel and Windows containers need a Windows kernel. However, Docker Desktop allows Linux containers to run on Windows and macOS by providing a Linux kernel through virtualization. The container OS type must match the kernel it runs on, but Docker facilitates cross-platform development and deployment within the same OS family."
+
+**Container OS Must Match Host Kernel Type:**
+- Windows containers can only run on Windows hosts
+- Linux containers can only run on Linux kernels
+**However, Docker Desktop Enables Cross-Platform Development:**
+- On Windows, Docker Desktop uses WSL2 or a VM to provide a Linux kernel, allowing Linux containers to run
+- On macOS, Docker Desktop uses a VM to provide a Linux kernel
+
+#### But there is a limitation
+**Docker Desktop provides:**
+✅ A Linux environment on Windows (using WSL2 or VM)
+✅ A Linux environment on Mac (using VM)
+**Docker Desktop does NOT provide:**
+❌ A Windows environment on Linux
+❌ A Windows environment on Mac
+
+**In Simple Terms:**
+If you're on Windows:  
+You can run both Windows and Linux containers  
+If you're on Mac or Linux:  
+You can only run Linux containers  
+You cannot run Windows containers at all  
+
+Docker Desktop only **provides cross-platform support in one direction (providing Linux on Windows/Mac), not the other way around (it cannot provide Windows on Linux/Mac)**.If you develop a Windows container (for example, a .NET application in a Windows container), you can only develop and run it on a Windows machine and not on any other machine.  
 
 ## How does Linux Image runs on Docker installed on windows
 When you install Docker on a Windows system, you're actually installing Docker Desktop, which includes several components that handle how containers run
