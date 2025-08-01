@@ -94,6 +94,21 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - Docker is suitable when the deployement os and testing os are same. if the os is different we should use VMs.
 - No soultion for data recovery and backup
 
+## How does Linux Image runs on Docker installed on windows
+When you install Docker on a Windows system, you're actually installing Docker Desktop, which includes several components that handle how containers run
+If you're using Docker Desktop on Windows, there are two possible modes:
+- **WSL 2 Backend (Modern approach):**
+    - Docker uses Windows Subsystem for Linux 2 (WSL 2)
+    - WSL 2 provides a real Linux kernel running inside Windows
+    - Linux containers run directly on this Linux kernel
+    - This is more efficient and has better performance
+WSL 2 (Windows Subsystem for Linux 2) is a feature of Windows that enables running a Linux kernel directly within Windows. When you install Docker Desktop on Windows 10/11, it's designed to work with WSL 2 automatically
+You don't need to manually set up or interact with WSL 2 to run Linux containers. Docker Desktop handles the integration automatically
+- **Hyper-V Backend (Traditional approach):**
+  - Docker creates a lightweight Linux VM using Hyper-V
+  - This VM runs the Linux kernel
+  - Containers run on this Linux kernel inside the VM
+
 ## Docker Architecture
 ![image](https://github.com/user-attachments/assets/8aa1df16-8792-4566-9a56-f0e78fe4a8df)  
 ### Docker Engine:
