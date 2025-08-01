@@ -104,20 +104,20 @@ This approach makes Docker more efficient, cost-effective, and flexible compared
 - On Windows, Docker Desktop uses WSL2 or a VM to provide a Linux kernel, allowing Linux containers to run
 - On macOS, Docker Desktop uses a VM to provide a Linux kernel
 
-#### But there is a limitation
-**Docker Desktop provides:**
-✅ A Linux environment on Windows (using WSL2 or VM)
-✅ A Linux environment on Mac (using VM)
-**Docker Desktop does NOT provide:**
-❌ A Windows environment on Linux
-❌ A Windows environment on Mac
+#### But there is a limitation  
+**Docker Desktop provides:**  
+✅ A Linux environment on Windows (using WSL2 or VM)  
+✅ A Linux environment on Mac (using VM)  
+**Docker Desktop does NOT provide:**  
+❌ A Windows environment on Linux  
+❌ A Windows environment on Mac  
 
-**In Simple Terms:**
-If you're on Windows:  
-You can run both Windows and Linux containers  
-If you're on Mac or Linux:  
-You can only run Linux containers  
-You cannot run Windows containers at all  
+**In Simple Terms:**   
+- If you're on Windows:    
+  You can run both Windows and Linux containers   
+- If you're on Mac or Linux:    
+  You can only run Linux containers    
+  You cannot run Windows containers at all    
 
 Docker Desktop only **provides cross-platform support in one direction (providing Linux on Windows/Mac), not the other way around (it cannot provide Windows on Linux/Mac)**.If you develop a Windows container (for example, a .NET application in a Windows container), you can only develop and run it on a Windows machine and not on any other machine.  
 
