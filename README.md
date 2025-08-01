@@ -101,8 +101,8 @@ If you're using Docker Desktop on Windows, there are two possible modes:
     - Docker uses Windows Subsystem for Linux 2 (WSL 2)
     - WSL 2 provides a real Linux kernel running inside Windows
     - Linux containers run directly on this Linux kernel
-    - This is more efficient and has better performance
-WSL 2 (Windows Subsystem for Linux 2) is a feature of Windows that enables running a Linux kernel directly within Windows. When you install Docker Desktop on Windows 10/11, it's designed to work with WSL 2 automatically
+    - This is more efficient and has better performance   
+WSL 2 (Windows Subsystem for Linux 2) is a feature of Windows that enables running a Linux kernel directly within Windows. When you install Docker Desktop on Windows 10/11, it's designed to work with WSL 2 automatically   
 You don't need to manually set up or interact with WSL 2 to run Linux containers. Docker Desktop handles the integration automatically
 - **Hyper-V Backend (Traditional approach):**
   - Docker creates a lightweight Linux VM using Hyper-V
